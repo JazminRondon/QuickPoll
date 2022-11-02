@@ -1,8 +1,8 @@
-package com.QuickPoll.favoriteseason.error;
+package com.QuickPoll.favoriteseason.dto;
 
 import java.util.Collection;
 
-public class VoteResults {
+public class VoteResult {
 
     private int totalVotes;
     private Collection<OptionCount> results;

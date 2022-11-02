@@ -1,4 +1,4 @@
-package com.QuickPoll.favoriteseason.error;
+package com.QuickPoll.favoriteseason.dto;
 
 public class OptionCount {
     private Long optionId;

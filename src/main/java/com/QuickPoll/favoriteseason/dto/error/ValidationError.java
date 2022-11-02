@@ -1,4 +1,4 @@
-package com.QuickPoll.favoriteseason.error;
+package com.QuickPoll.favoriteseason.dto.error;
 
 public class ValidationError {
 
@@ -23,11 +23,5 @@ public class ValidationError {
         this.message = message;
     }
 
-    @Override
-    public String toString() {
-        return "ValidationError{" +
-                "code='" + code + '\'' +
-                ", message='" + message + '\'' +
-                '}';
-    }
+
 }

@@ -1,4 +1,4 @@
-package com.QuickPoll.favoriteseason.error;
+package com.QuickPoll.favoriteseason.dto.error;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,9 +14,6 @@ public class ErrorDetail {
         private Map<String, List<ValidationError>> errors = new HashMap<String, List<ValidationError>>();
 // Getters and setters removed for brevity
 
-
-    public ErrorDetail() {
-    }
 
     public String getTitle() {
             return title;
@@ -74,18 +71,7 @@ public class ErrorDetail {
             this.errors = errors;
         }
 
-    @Override
-    public String toString() {
-        return "ErrorDetail{" +
-                "title='" + title + '\'' +
-                ", status=" + status +
-                ", detail='" + detail + '\'' +
-                ", timeStamp=" + timeStamp +
-                ", path='" + path + '\'' +
-                ", developerMessage='" + developerMessage + '\'' +
-                ", errors=" + errors +
-                '}';
-    }
+
 }
 
 

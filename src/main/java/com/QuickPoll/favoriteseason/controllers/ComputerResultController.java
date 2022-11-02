@@ -1,8 +1,8 @@
 package com.QuickPoll.favoriteseason.controllers;
 
 import com.QuickPoll.favoriteseason.Vote;
-import com.QuickPoll.favoriteseason.error.OptionCount;
-import com.QuickPoll.favoriteseason.error.VoteResults;
+import com.QuickPoll.favoriteseason.dto.OptionCount;
+import com.QuickPoll.favoriteseason.dto.VoteResult;
 import com.QuickPoll.favoriteseason.repository.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +22,7 @@ public class ComputerResultController {
     private VoteRepository voteRepository;
     @RequestMapping(value="/computeresult", method= RequestMethod.GET)
     public ResponseEntity<?> computeResult(@RequestParam Long pollId) {
-        VoteResults voteResult = new VoteResults();
+        VoteResult voteResult = new VoteResult();
         Iterable<Vote> allVotes = voteRepository.findByPoll(pollId);
 
         int totalVotes = 0 ;
@@ -40,7 +40,7 @@ public class ComputerResultController {
         voteResult.setTotalVotes(totalVotes);
         voteResult.setResults(tempMap.values());
 
-        return new ResponseEntity<VoteResults>(voteResult, HttpStatus.OK);
+        return new ResponseEntity<VoteResult>(voteResult, HttpStatus.OK);
     }
 
 }
